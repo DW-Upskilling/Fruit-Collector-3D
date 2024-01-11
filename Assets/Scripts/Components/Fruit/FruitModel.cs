@@ -1,6 +1,5 @@
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.ScriptableObjects;
-using UnityEngine;
 
 namespace FruitCollector3D.Components.Fruit
 {
@@ -8,10 +7,10 @@ namespace FruitCollector3D.Components.Fruit
     {
         public FruitModel(FruitScriptableObject _scriptableObject) : base(_scriptableObject)
         {
-            Init(_scriptableObject);
+            Activate(_scriptableObject);
         }
 
-        public void Init(FruitScriptableObject _scriptableObject)
+        public void Activate(FruitScriptableObject _scriptableObject)
         {
             this.ScriptableObject = _scriptableObject;
         }

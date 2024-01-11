@@ -18,3 +18,4 @@ MonoBehaviour:
     type: 3}
   Prefab: {fileID: 4736210074712817621, guid: fd6540f30af986149aec0d0225c05f8f, type: 3}
   Type: 4
+  TimeToLiveSeconds: 120

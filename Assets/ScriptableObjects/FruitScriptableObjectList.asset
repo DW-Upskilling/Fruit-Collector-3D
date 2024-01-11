@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d214bb093fa1f4b93f0a120f24180f, type: 3}
   m_Name: FruitScriptableObjectList
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4736210074712817621, guid: fd6540f30af986149aec0d0225c05f8f, type: 3}
+  minPosition: {x: -5, y: 2, z: -7.5}
+  maxPosition: {x: 5, y: 2, z: 7.5}
   list:
   - {fileID: 11400000, guid: 2781cf851f9c7d8409df84ffe77beee9, type: 2}
   - {fileID: 11400000, guid: 545d6804311f50c47b4126babb2e1470, type: 2}

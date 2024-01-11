@@ -13,7 +13,9 @@ namespace FruitCollector3D.Components.Fruit
 
         protected override FruitController CreateItem()
         {
-            return new FruitController(_fruitScriptableObject);
+            FruitController fruitController = new FruitController(_fruitScriptableObject);
+            fruitController.FruitPool = this;
+            return fruitController;
         }
     }
 }

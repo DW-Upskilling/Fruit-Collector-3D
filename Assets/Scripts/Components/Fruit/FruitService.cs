@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using UnityEngine;
+
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.ScriptableObjects;
 
@@ -11,13 +14,19 @@ namespace FruitCollector3D.Components.Fruit
 
         public FruitService(FruitScriptableObjectList _scriptableObjectList) {
             _fruitScriptableObjectList = _scriptableObjectList;
-
-            fruitPool = new FruitPool(_fruitScriptableObjectList.GetItem(0));
         }
 
         public override void Start()
         {
-            fruitPool.GetItem().Init(_fruitScriptableObjectList.GetItem(1));
+            fruitPool = new FruitPool(_fruitScriptableObjectList.GetItem(0));
+        }
+
+        public void SpawnFruit(FruitTypes _fruitType)
+        {
+            List<FruitScriptableObject> fruitScriptableObjects = _fruitScriptableObjectList.GetItems(_fruitType);
+            if (fruitScriptableObjects.Count < 1) return;
+
+            fruitPool.GetItem().Activate(fruitScriptableObjects[Random.Range(0, fruitScriptableObjects.Count - 1)]);
         }
     }
 }

@@ -14,5 +14,7 @@ namespace FruitCollector3D.ScriptableObjects
         [SerializeField] public FruitView Prefab;
 
         [SerializeField] public FruitTypes Type;
+
+        [SerializeField, Range(60f, 300f)] public float TimeToLiveSeconds;
     }
 }
