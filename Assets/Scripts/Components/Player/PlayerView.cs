@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using FruitCollector3D.GenericClasses.MVC;
+using FruitCollector3D.Interfaces;
 
 namespace FruitCollector3D.Components.Player
 {
-    public class PlayerView : View<PlayerController>
+    public class PlayerView : View<PlayerController>, IPlayer
     {
         public override void SetController(PlayerController _controller)
         {
