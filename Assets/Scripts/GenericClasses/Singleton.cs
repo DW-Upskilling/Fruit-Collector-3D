@@ -12,6 +12,7 @@ namespace FruitCollector3D.GenericClasses
             if (instance == null)
             {
                 instance = (T)this;
+                DontDestroyOnLoad(this.gameObject);
                 Init();
             }
             else

@@ -9,7 +9,7 @@ namespace FruitCollector3D.GenericClasses.MVC
 
     public abstract class Model<T> : Model where T: ScriptableObject
     {
-        public T ScriptableObject { get; private set; }
+        public T ScriptableObject { get; set; }
         public Model(T _scriptableObject)
         {
             this.ScriptableObject = _scriptableObject;

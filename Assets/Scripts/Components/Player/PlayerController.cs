@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using FruitCollector3D.GenericClasses.MVC;
+using FruitCollector3D.ScriptableObjects;
 
-public class PlayerController : MonoBehaviour
+namespace FruitCollector3D.Components.Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerController : Controller<PlayerModel, PlayerView, PlayerScriptableObject>
     {
-        
-    }
+        public PlayerController(PlayerScriptableObject _scriptableObject) : base(_scriptableObject)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        public override PlayerModel CreateModel(PlayerScriptableObject _scriptableObject)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override PlayerView InstantiateView(PlayerScriptableObject _scriptableObject)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
+

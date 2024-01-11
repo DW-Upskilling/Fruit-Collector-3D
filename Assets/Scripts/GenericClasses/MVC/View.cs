@@ -11,6 +11,9 @@ namespace FruitCollector3D.GenericClasses.MVC
     {
         public T Controller { get; private set; }
 
-        public abstract void SetController(T _controller);
+        public void SetController(T _controller)
+        {
+            this.Controller = _controller;
+        }
     }
 }

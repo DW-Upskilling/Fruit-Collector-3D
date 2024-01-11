@@ -22,7 +22,7 @@ namespace FruitCollector3D.GenericClasses
         }
     }
 
-    public class Observer<T>
+    public abstract class Observer<T>
     {
         private event Action<T> observerQueue;
 

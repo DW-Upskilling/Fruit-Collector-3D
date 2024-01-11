@@ -9,9 +9,6 @@ namespace FruitCollector3D.Components.Player
 {
     public class PlayerView : View<PlayerController>, IPlayer
     {
-        public override void SetController(PlayerController _controller)
-        {
-            throw new System.NotImplementedException();
-        }
+
     }
 }

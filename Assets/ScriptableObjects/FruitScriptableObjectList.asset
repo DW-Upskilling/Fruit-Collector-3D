@@ -12,3 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d214bb093fa1f4b93f0a120f24180f, type: 3}
   m_Name: FruitScriptableObjectList
   m_EditorClassIdentifier: 
+  prefab: {fileID: 4736210074712817621, guid: fd6540f30af986149aec0d0225c05f8f, type: 3}
+  list:
+  - {fileID: 11400000, guid: 2781cf851f9c7d8409df84ffe77beee9, type: 2}
+  - {fileID: 11400000, guid: 545d6804311f50c47b4126babb2e1470, type: 2}
+  - {fileID: 11400000, guid: 495a9dbbbb9cd7e439bd708a728d3d43, type: 2}
+  - {fileID: 11400000, guid: a2a81d1e6eb933b46a2534760c94db1a, type: 2}
+  - {fileID: 11400000, guid: 0328d3f36fad7cb4cbf309dfaec3aea0, type: 2}
+  - {fileID: 11400000, guid: 0a4028c6a207edd49859aa8ac0b22780, type: 2}
+  - {fileID: 11400000, guid: a00edf884ec337a4985e8ade23432641, type: 2}
+  - {fileID: 11400000, guid: 50175db746a1a5f46a354bc92eba5d19, type: 2}
+  - {fileID: 11400000, guid: 744f189f6448f5f41aac012eb973b14c, type: 2}
+  - {fileID: 11400000, guid: 0bddf47ca70f66144a2d05576597dfbe, type: 2}

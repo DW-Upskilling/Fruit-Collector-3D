@@ -11,6 +11,7 @@ namespace FruitCollector3D.Components.Player
     {
         public PlayerModel(PlayerScriptableObject _scriptableObject) : base(_scriptableObject)
         {
+
         }
     }
 }
