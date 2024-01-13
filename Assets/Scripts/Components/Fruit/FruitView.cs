@@ -13,6 +13,7 @@ namespace FruitCollector3D.Components.Fruit
         private MeshRenderer meshRenderer;
 
         private float timeLeft;
+        private bool isReady;
 
         private void Awake()
         {
@@ -30,6 +31,18 @@ namespace FruitCollector3D.Components.Fruit
             this.gameObject.transform.position = _position;
 
             timeLeft = _scriptableObject.TimeToLiveSeconds;
+            isReady = false;
+        }
+
+        public void Collision(IBasket _basket)
+        {
+            // if(isReady)
+                Controller.Deactivate();
+        }
+
+        public void Collision(IPlayer _player)
+        {
+            isReady = true;
         }
 
         private void Update()

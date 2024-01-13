@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.ScriptableObjects;
 
