@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6abd95b0e472fbc489db5be68c67e4a6, type: 3}
   m_Name: PlayerScriptableObject
   m_EditorClassIdentifier: 
+  Prefab: {fileID: 5123049677175056373, guid: e14167b66b2eea04a903f3c1fbc2c3d4, type: 3}
+  Speed: 2

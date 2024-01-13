@@ -29,7 +29,7 @@ namespace FruitCollector3D.Managers
 
         private void Start()
         {
-            // PlayerService.Start();
+            PlayerService.Start();
             FruitService.Start();
         }
     }

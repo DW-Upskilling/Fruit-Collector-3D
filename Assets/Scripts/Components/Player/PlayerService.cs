@@ -5,15 +5,17 @@ namespace FruitCollector3D.Components.Player
 {
     public class PlayerService : Service
     {
-        private PlayerScriptableObject playerScriptableObject;
+        private PlayerScriptableObject _playerScriptableObject;
+
+        private PlayerController playerController;
 
         public PlayerService(PlayerScriptableObject _scriptableObject) {
-            playerScriptableObject = _scriptableObject;
+            _playerScriptableObject = _scriptableObject;
         }
 
         public override void Start()
         {
-            throw new System.NotImplementedException();
+            playerController = new PlayerController(_playerScriptableObject);
         }
     }
 }

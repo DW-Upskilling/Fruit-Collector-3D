@@ -7,6 +7,7 @@ using FruitCollector3D.Interfaces;
 
 namespace FruitCollector3D.Components.Player
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class PlayerView : View<PlayerController>, IPlayer
     {
 
