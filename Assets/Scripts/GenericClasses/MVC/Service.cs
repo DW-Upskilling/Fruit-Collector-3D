@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace FruitCollector3D.GenericClasses.MVC
 {
     public abstract class Service

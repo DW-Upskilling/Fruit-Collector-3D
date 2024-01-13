@@ -14,6 +14,7 @@ namespace FruitCollector3D.Managers
     {
         [SerializeField] private PlayerScriptableObject _playerScriptableObject;
         [SerializeField] private FruitScriptableObjectList _fruitScriptableObjectList;
+        [SerializeField] private Joystick _joystick;
 
         public InputService InputService { get; private set; }
         public PlayerService PlayerService { get; private set; }
@@ -21,7 +22,7 @@ namespace FruitCollector3D.Managers
         
         protected override void Init()
         {
-            InputService = new InputService();
+            InputService = new InputService(_joystick);
 
             PlayerService = new PlayerService(_playerScriptableObject);
             FruitService = new FruitService(_fruitScriptableObjectList);
@@ -31,6 +32,11 @@ namespace FruitCollector3D.Managers
         {
             PlayerService.Start();
             FruitService.Start();
+        }
+
+        private void Update()
+        {
+            InputService.Update();
         }
     }
 }
