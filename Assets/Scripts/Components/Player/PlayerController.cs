@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cinemachine;
 
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.ScriptableObjects;
@@ -22,6 +23,12 @@ namespace FruitCollector3D.Components.Player
                 position.z = _inputData.vertical * Model.ScriptableObject.Speed;
 
             View.UpdatePosition(position);
+        }
+
+        public void SetFreeLookCamera(CinemachineFreeLook _cinemachineFreeLook)
+        {
+            _cinemachineFreeLook.Follow = View.gameObject.transform;
+            _cinemachineFreeLook.LookAt = View.gameObject.transform;
         }
 
         public override PlayerModel CreateModel(PlayerScriptableObject _scriptableObject) => new PlayerModel(_scriptableObject);

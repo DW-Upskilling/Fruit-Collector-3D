@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Cinemachine;
 
 using FruitCollector3D.GenericClasses;
 using FruitCollector3D.Components.Player;
@@ -7,7 +9,7 @@ using FruitCollector3D.ScriptableObjects;
 using FruitCollector3D.Services;
 using FruitCollector3D.Components.Fruit;
 using FruitCollector3D.Components.Basket;
-using TMPro;
+
 
 namespace FruitCollector3D.Managers
 {
@@ -20,6 +22,7 @@ namespace FruitCollector3D.Managers
         [SerializeField] private List<BasketView> _basketList;
 
         [SerializeField] private TextMeshProUGUI _scoreUI;
+        [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
 
         public InputService InputService { get; private set; }
         public ScoreService ScoreService { get; private set; }
@@ -43,6 +46,7 @@ namespace FruitCollector3D.Managers
             FruitService.Start();
             BasketService.Start();
 
+            PlayerService.SetFreeLookCamera(_cinemachineFreeLook);
             StartCoroutine(BasketService.SwitchBaskets());
         }
 

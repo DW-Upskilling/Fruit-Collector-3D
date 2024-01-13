@@ -1,3 +1,5 @@
+using Cinemachine;
+
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.Managers;
 using FruitCollector3D.ScriptableObjects;
@@ -19,5 +21,7 @@ namespace FruitCollector3D.Components.Player
             playerController = new PlayerController(_playerScriptableObject);
             ServiceManager.Instance.InputService.AddListener(playerController.InputController);
         }
+
+        public void SetFreeLookCamera(CinemachineFreeLook _cinemachineFreeLook) => playerController.SetFreeLookCamera(_cinemachineFreeLook);
     }
 }

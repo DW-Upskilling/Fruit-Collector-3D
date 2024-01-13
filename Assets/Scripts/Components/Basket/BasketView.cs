@@ -19,7 +19,6 @@ namespace FruitCollector3D.Components.Basket
         {
             GameObject _gameObject = collision.gameObject;
 
-            Debug.Log(_gameObject.name);
             IFruit ifruit = _gameObject.GetComponent<IFruit>();
             if(ifruit != null)
             {
