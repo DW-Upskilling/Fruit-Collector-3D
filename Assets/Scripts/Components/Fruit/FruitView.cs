@@ -36,8 +36,9 @@ namespace FruitCollector3D.Components.Fruit
 
         public void Collision(IBasket _basket)
         {
-            // if(isReady)
-                Controller.Deactivate();
+            if (isReady)
+                Controller.ScoreUpdate(timeLeft);
+            Controller.Deactivate();
         }
         public void Collision(IPlayer _player) => isReady = true;
         public void Collision(IVoid _void) => Controller.Deactivate();

@@ -1,5 +1,7 @@
 using FruitCollector3D.GenericClasses.MVC;
+using FruitCollector3D.Managers;
 using FruitCollector3D.ScriptableObjects;
+using FruitCollector3D.Services;
 using UnityEngine;
 
 namespace FruitCollector3D.Components.Fruit
@@ -8,11 +10,14 @@ namespace FruitCollector3D.Components.Fruit
     {
         public FruitPool FruitPool { get; set; }
 
+        private ScoreService ScoreService;
+
         public FruitController(FruitScriptableObject _scriptableObject) : base(_scriptableObject)
         {
             View.SetController(this);
-
             Activate(_scriptableObject);
+
+            ScoreService = ServiceManager.Instance.ScoreService;
         }
 
         public void Activate(FruitScriptableObject _scriptableObject)
@@ -25,8 +30,12 @@ namespace FruitCollector3D.Components.Fruit
         public void Deactivate()
         {
             View.gameObject.SetActive(false);
-
             FruitPool.ReturnItem(this);
+        }
+
+        public void ScoreUpdate(float currentScore)
+        {
+            ScoreService.UpdateScore(currentScore);
         }
 
         public override FruitModel CreateModel(FruitScriptableObject _scriptableObject) => new FruitModel(_scriptableObject);

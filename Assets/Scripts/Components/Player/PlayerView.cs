@@ -10,6 +10,18 @@ namespace FruitCollector3D.Components.Player
     {
         private float smoothRotationTime;
 
+        private void OnCollisionEnter(Collision collider)
+        {
+            GameObject _gameObject = collider.gameObject;
+
+            IFruit ifruit = _gameObject.GetComponent<IFruit>();
+            if (ifruit != null)
+            {
+                ifruit.Collision(this);
+                return;
+            }
+        }
+
         public void UpdatePosition(Vector3 _offsetPosition) {
             Vector3 currPosition = this.gameObject.transform.position;
 

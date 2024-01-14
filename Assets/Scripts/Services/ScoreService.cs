@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEngine;
 
 namespace FruitCollector3D.Services
 {
@@ -11,13 +12,17 @@ namespace FruitCollector3D.Services
         public ScoreService(TextMeshProUGUI _scoreUI)
         {
             this._scoreUI = _scoreUI;
-            this.score = 0;
+            this.score = PlayerPrefs.GetFloat("Score", 0);
+
+            UpdateScore(0);
         }
 
         public void UpdateScore(float score)
         {
-            this.score += score;
+            this.score = Mathf.RoundToInt(this.score + score);
             _scoreUI.text = this.score.ToString();
+
+            PlayerPrefs.SetFloat("Score", this.score);
         }
     }
 }
