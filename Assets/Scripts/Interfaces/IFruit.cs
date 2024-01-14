@@ -6,5 +6,6 @@ namespace FruitCollector3D.Interfaces
     {
         public abstract void Collision(IBasket _player);
         public abstract void Collision(IPlayer _player);
+        public abstract void Collision(IVoid _void);
     }
 }

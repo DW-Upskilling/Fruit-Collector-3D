@@ -3,6 +3,7 @@ using Cinemachine;
 using FruitCollector3D.GenericClasses.MVC;
 using FruitCollector3D.Managers;
 using FruitCollector3D.ScriptableObjects;
+using UnityEngine;
 
 namespace FruitCollector3D.Components.Player
 {
@@ -23,5 +24,6 @@ namespace FruitCollector3D.Components.Player
         }
 
         public void SetFreeLookCamera(CinemachineFreeLook _cinemachineFreeLook) => playerController.SetFreeLookCamera(_cinemachineFreeLook);
+        public void SetMainCamera(Camera _mainCamera) => playerController.SetMainCamera(_mainCamera);
     }
 }

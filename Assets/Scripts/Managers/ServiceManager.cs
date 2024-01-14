@@ -22,6 +22,7 @@ namespace FruitCollector3D.Managers
         [SerializeField] private List<BasketView> _basketList;
 
         [SerializeField] private TextMeshProUGUI _scoreUI;
+        [SerializeField] private Camera _mainCamera;
         [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
 
         public InputService InputService { get; private set; }
@@ -47,6 +48,8 @@ namespace FruitCollector3D.Managers
             BasketService.Start();
 
             PlayerService.SetFreeLookCamera(_cinemachineFreeLook);
+            PlayerService.SetMainCamera(_mainCamera);
+
             StartCoroutine(BasketService.SwitchBaskets());
         }
 

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 using FruitCollector3D.GenericClasses;
 
 namespace FruitCollector3D.Services
@@ -13,10 +15,20 @@ namespace FruitCollector3D.Services
         public void Update()
         {
             InputData inputData = new InputData();
+
             inputData.horizontal = _joystick.Horizontal;
             inputData.vertical = _joystick.Vertical;
-            if(inputData.horizontal != 0 || inputData.vertical != 0)
+            
+            if (inputData.horizontal != 0 || inputData.vertical != 0)
                TriggerEvent(inputData);
+            else
+            {
+                inputData.horizontal = Input.GetAxisRaw("Horizontal");
+                inputData.vertical = Input.GetAxisRaw("Vertical");
+
+                if (inputData.horizontal != 0 || inputData.vertical != 0)
+                    TriggerEvent(inputData);
+            }
         }
     }
 
